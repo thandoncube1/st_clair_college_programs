@@ -34,8 +34,7 @@ public class LoanEstimator {
         if (loanApproved) {
             double amountPaidOver5Years = amountBorrowing * (interest/100) * 5 + amountBorrowing;
             double amountPaidOver10Years = amountBorrowing * (interest/100) * 10 + amountBorrowing;
-            System.out.printf("You've been approved for $%,3.2f ", amountBorrowing);
-            System.out.printf(" your interest rate will be %.2f%s\n", interest, "%");
+            System.out.printf("You've been approved for $%,3.2f your interest rate will be %.2f%s\n", amountBorrowing, interest, "%");
             System.out.printf("After 5 years you'll have paid $%,3.2f\n", amountPaidOver5Years);
             System.out.printf("After 10 years you'll have paid $%,3.2f", amountPaidOver10Years);
         } else System.out.println("Your loan was not approved");

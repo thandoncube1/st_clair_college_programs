@@ -2,7 +2,7 @@ package LabExercises;
 
 import java.util.Scanner;
 
-public class GameLab {
+public class Exercise_3_17 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("User: Select Scissors (0), Rock (1), Paper (2): ");

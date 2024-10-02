@@ -6,8 +6,15 @@ for number in range(n):
     num: int = int(input("Enter the list of numbers: "))
     myList.append(num)
 
-reversedList: list = list()
-for number in enumerate(myList):
-    reversedList.append(myList)
+# temp = initial
+# initial = calc
+# calc = temp
 
-print(reversedList)    
+# return calc;
+
+# reversedList: list = list()
+# enumerate returns (index) and value for the tuple
+for index, number in enumerate(myList):
+        pass
+
+print(myList)    

@@ -60,8 +60,8 @@ public class Lab_Exercise_11 {
                     System.out.println("The computer is on Paper. You are on Scissors. You won!");
                 }
             } else {
-                System.out.println("You enter an invalid selection.\nSelect between Scissors (0), Rock (1), Paper (2) next time.");
-            }
+                  System.out.println("You enter an invalid selection.\nSelect between Scissors (0), Rock (1), Paper (2) next time.");
+              }
         } while (numberOfWins <= 2);
 
         System.out.println("""

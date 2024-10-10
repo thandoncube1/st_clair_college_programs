@@ -1,15 +1,21 @@
 def min_max(values: list) -> list[int, int]:
-    if (len(list) < 2):
+    if (len(values) < 2):
         return
     current_min = values[0]
     current_max = values[1]
-    right = 0
+    right = len(values) - 1
     left = 0
-    for i in values:
-        if (i < values[right]):
+    # Get the min value of list
+    while right > left:
+        if (values[left] < values[right]):
+            current_min = values[right]
             right -= 1
-            pass
-        if (i > values[left]):
-            left -= 1
-            pass
+        elif (values[left] > values[right]):
+            current_max = values[left]
+            right -= 1
+        else: 
+            left += 1
+    return [current_min, current_max]
         
+result = min_max([2, 3, 6, 8, 4, 1])
+print(result)

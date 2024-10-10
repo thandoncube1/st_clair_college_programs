@@ -36,12 +36,10 @@ public class WeightedTotals {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         // 2 Tests worth 50%, 10 labs worth 30%, 8 quizzes worth 10%, 3 assignments worth 10%
-        double testScore = 0, labScores = 0, quizScores = 0, assignments = 0;
-
-        testScore = getScores(2, "Test Scores", input);
-        labScores = getScores(10, "Lab Scores", input);
-        quizScores = getScores(8, "Quiz Scores", input);
-        assignments = getScores(3, "Assignment Scores", input);
+        double testScore = getScores(2, "Test Scores", input);
+        double labScores = getScores(10, "Lab Scores", input);
+        double quizScores = getScores(8, "Quiz Scores", input);
+        double assignments = getScores(3, "Assignment Scores", input);
 
         double testAverage = (testScore / 2) * 0.5;
         double labAverage = (labScores / 10) * 0.3;

@@ -18,5 +18,7 @@ def hello(name: str = "Wilson") -> str:
 def message() -> str:
     return "This is a warning message!"
 
-async def calculate(a, b, func):
-    return await func(a, b)
+def calculate(a, b, callback):
+    return callback(a, b)
+
+print(calculate(2, 3, lambda a, b: a + b))

@@ -1,8 +1,13 @@
 # This is a Two pointer approach to solving this problem
 # Returning two values min and max
+'''
+@param list - Type has to be a list
+@description - This is a function that takes an array
+and return a array of 2 values min and max in the array
+'''
 def min_max(values: list) -> list[int, int]:
     # If out values array have only 2 elements
-    if (len(values) < 2):
+    if len(values) < 2:
         return
 
     current_min = current_max = values[0]
@@ -11,9 +16,9 @@ def min_max(values: list) -> list[int, int]:
     # Check the min and max value of list
     # by evaluating if current_min or max are greater or less than value.
     while i < len(values) and j < len(values):
-        if (values[i] < current_min):
+        if values[i] < current_min:
             current_min = values[i]
-        if (values[j] > current_max):
+        if values[j] > current_max:
             current_max = values[j]
         i += 1
         j += 1

@@ -4,16 +4,17 @@ import java.util.*;
 
 public class StudentRecord {
     public void sortStudentNames(String[] students, int sortOrder) {
+        Arrays.sort(students);
         String[] sortedArray = new String[students.length];
         switch (sortOrder) {
-            case 1 -> {
-                Arrays.sort(students);
-            }
+            case 1 -> System.arraycopy(students, 0, sortedArray, 0, students.length);
             case 2 -> {
-                for (int i = students.length - 1; i > 0; i--) {
+                for (int i = students.length - 1; i >= 0; i--) {
+                    System.out.println(i);
                     sortedArray[students.length - i - 1] = students[i];
                 }
             }
+            default -> throw new IllegalStateException("Unexpected value: " + sortOrder);
         }
         // List all elements of the Array
         Arrays

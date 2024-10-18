@@ -18,12 +18,11 @@ public class Lab_Exercise_14 {
             int sum = rollDiceSum(random, 6);
             if (sum == 7) {
                 message = LOSE;
+                break;
             } else if (sum == point) {
                 message = WIN;
-            } else {
-                message = LOSE;
+                break;
             }
-            break;
         }
         return message;
     }

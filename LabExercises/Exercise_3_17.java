@@ -13,7 +13,7 @@ public class Exercise_3_17 {
         // Define the rules of the Game
         if (selection == 1) {
             if (computer == 1) System.out.println("The computer is Rock. You are Rock too. It is a draw");
-            else if (computer == 0) System.out.println("The computer is on Scissors. You are on Rock. You won!");f"{shape.capitalize()} with side length: {side}\nArea: {area}, Perimeter: {perimeter}")
+            else if (computer == 0) System.out.println("The computer is on Scissors. You are on Rock. You won!");
             else System.out.println("The computer is on Paper. You are on Rock. The computer wins!");
         } else if (selection == 2) {
             if (computer == 2) System.out.println("The computer is on Paper. You are on Paper too. It is a draw");

@@ -11,6 +11,22 @@ public class Lab_Exercise_14 {
         System.out.printf("You rolled %d + %d = %d%n", number1, number2, (number1 + number2));
         return number1 + number2;
     }
+    public static String alternateConditionLogic(Random random, int point, String LOSE, String WIN) {
+        String message = "";
+
+        while (point != 0) {
+            int sum = rollDiceSum(random, 6);
+            if (sum == 7) {
+                message = LOSE;
+            } else if (sum == point) {
+                message = WIN;
+            } else {
+                message = LOSE;
+            }
+            break;
+        }
+        return message;
+    }
     public static void main(String[] args) {
         // Instantiate the relevant classes
         Random random = new Random();
@@ -19,10 +35,9 @@ public class Lab_Exercise_14 {
         final String WIN = "You win";
         // Define the relevant variables
         int sum;
-        int newSum;
         int point = 0;
         String message;
-        String newMessage = "";
+        String newMessage;
 
         // Play the game
         sum = rollDiceSum(random, 6);
@@ -41,22 +56,13 @@ public class Lab_Exercise_14 {
                 point = sum;
                 message = "Point is " + point;
             }
-            default -> message = "";
+            // Just in case sum is not a valid Integer
+            default -> throw new IllegalArgumentException();
         }
         // Print after the initial game logic
         System.out.println(message);
-
-        while (point != 0) {
-            newSum = rollDiceSum(random, 6);
-            if (newSum == 7) {
-                newMessage = LOSE;
-            } else if (newSum == sum) {
-                newMessage = WIN;
-            } else {
-                newMessage = LOSE;
-            }
-            break;
-        }
+        // Running the alternate condition
+        newMessage = alternateConditionLogic(random, point, LOSE, WIN);
         // Only when the loop ran
         if (!newMessage.isEmpty()) {
             System.out.println(newMessage);
